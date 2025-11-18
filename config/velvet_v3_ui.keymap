@@ -28,11 +28,39 @@
             release-after-ms = <200>;
         };
 
-        FigAndKv: FigAndKv {
+        Kv_Fig: Kv_Fig {
             compatible = "zmk,behavior-tap-dance";
-            label = "FIGANDKV";
+            label = "KV_FIG";
             #binding-cells = <0>;
             bindings = <&SqBrackets>, <&FigBrackets>;
+        };
+
+        Krug_Ugl: Krug_Ugl {
+            compatible = "zmk,behavior-tap-dance";
+            label = "KRUG_UGL";
+            #binding-cells = <0>;
+            bindings = <&Krug>, <&Uglov>;
+        };
+
+        Dot_zap: Dot_zap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DOT_ZAP";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp COMMA>;
+        };
+
+        ToZap_Dvoet: ToZap_Dvoet {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TOZAP_DVOET";
+            #binding-cells = <0>;
+            bindings = <&kp SEMI>, <&kp COLON>;
+        };
+
+        Npod_Rav: Npod_Rav {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NPOD_RAV";
+            #binding-cells = <0>;
+            bindings = <&kp UNDER>, <&kp EQUAL>;
         };
 
         zip_auto_mouse: zip_auto_mouse {
@@ -65,6 +93,20 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT>;
             label = "FIGBRACKETS";
+        };
+
+        Krug: Krug {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT>;
+            label = "KRUG";
+        };
+
+        Uglov: Uglov {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LT &kp GT &kp LEFT>;
+            label = "UGLOV";
         };
     };
 
@@ -161,10 +203,10 @@
 
         Simvols {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &FigAndKv  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans     &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans    &trans   &trans     &trans        &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &Dot_zap  &Kv_Fig  &Krug_Ugl  &ToZap_Dvoet  &Npod_Rav  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans    &trans   &trans     &trans        &trans     &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans   &trans     &trans
             >;
 
             display-name = "User1";
