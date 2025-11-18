@@ -33,6 +33,8 @@
             label = "KV_FIG";
             #binding-cells = <0>;
             bindings = <&SqBrackets>, <&FigBrackets>;
+
+            tapping-term-ms = <220>;
         };
 
         Krug_Ugl: Krug_Ugl {
@@ -40,6 +42,8 @@
             label = "KRUG_UGL";
             #binding-cells = <0>;
             bindings = <&Krug>, <&Uglov>;
+
+            tapping-term-ms = <220>;
         };
 
         Dot_zap: Dot_zap {
@@ -47,6 +51,8 @@
             label = "DOT_ZAP";
             #binding-cells = <0>;
             bindings = <&kp DOT>, <&kp COMMA>;
+
+            tapping-term-ms = <220>;
         };
 
         ToZap_Dvoet: ToZap_Dvoet {
@@ -54,6 +60,8 @@
             label = "TOZAP_DVOET";
             #binding-cells = <0>;
             bindings = <&kp SEMI>, <&kp COLON>;
+
+            tapping-term-ms = <220>;
         };
 
         Npod_Rav: Npod_Rav {
@@ -61,6 +69,8 @@
             label = "NPOD_RAV";
             #binding-cells = <0>;
             bindings = <&kp UNDER>, <&kp EQUAL>;
+
+            tapping-term-ms = <220>;
         };
 
         zip_auto_mouse: zip_auto_mouse {
