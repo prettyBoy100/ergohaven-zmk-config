@@ -314,7 +314,7 @@
         Vis_Stud {
             bindings = <
 &trans  &trans       &ClearSpace_Save  &kp UP          &mt LC(MINUS) LC(T)  &trans                            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LS(F12)  &mt LEFT HOME     &kp DOWN_ARROW  &mt END RIGHT_ARROW  &Ren_Dublicate                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LS(F12)  &mt HOME LEFT     &kp DOWN_ARROW  &mt END RIGHT_ARROW  &Ren_Dublicate                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans       &trans            &trans          &trans               &trans                            &trans  &trans  &trans  &trans  &trans  &trans
                      &trans            &Komit_UnCom    &trans               &trans          &trans    &trans  &trans  &trans  &trans  &trans
             >;
