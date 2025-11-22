@@ -73,6 +73,46 @@
             tapping-term-ms = <220>;
         };
 
+        Ren_Dublicate: Ren_Dublicate {
+            compatible = "zmk,behavior-tap-dance";
+            label = "REN_DUBLICATE";
+            #binding-cells = <0>;
+            tapping-term-ms = <220>;
+            bindings = <&kp LC(D)>, <&Rename_Var>;
+        };
+
+        i_ili: i_ili {
+            compatible = "zmk,behavior-tap-dance";
+            label = "I_ILI";
+            #binding-cells = <0>;
+            tapping-term-ms = <220>;
+            bindings = <&kp AMPERSAND>, <&double_ili>;
+        };
+
+        DCav_Dol: DCav_Dol {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DCAV_DOL";
+            #binding-cells = <0>;
+            tapping-term-ms = <220>;
+            bindings = <&double_Kav>, <&kp DOLLAR>;
+        };
+
+        Komit_UnCom: Komit_UnCom {
+            compatible = "zmk,behavior-tap-dance";
+            label = "KOMIT_UNCOM";
+            #binding-cells = <0>;
+            tapping-term-ms = <220>;
+            bindings = <&Commit>, <&UnCom>;
+        };
+
+        ClearSpace_Save: ClearSpace_Save {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CLEARSPACE_SAVE";
+            #binding-cells = <0>;
+            tapping-term-ms = <220>;
+            bindings = <&kp LC(S)>, <&ClearSpaces>;
+        };
+
         zip_auto_mouse: zip_auto_mouse {
             compatible = "zmk,input-processor-temp-layer";
             #input-processor-cells = <2>;
@@ -125,6 +165,48 @@
             bindings = <&kp TAB &kp TAB>;
             label = "D_TAB";
         };
+
+        Rename_Var: Rename_Var {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(R) &kp LC(R)>;
+            label = "RENAME_VAR";
+        };
+
+        double_Kav: double_Kav {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DQT &kp DQT>;
+            label = "DOUBLE_KAV";
+        };
+
+        double_ili: double_ili {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PIPE &kp PIPE>;
+            label = "DOUBLE_ILI";
+        };
+
+        Commit: Commit {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(K) &kp LC(C)>;
+            label = "COMMIT";
+        };
+
+        UnCom: UnCom {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(K) &kp LC(U)>;
+            label = "UNCOM";
+        };
+
+        ClearSpaces: ClearSpaces {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(K) &kp LC(D)>;
+            label = "CLEARSPACES";
+        };
     };
 
     keymap {
@@ -132,10 +214,10 @@
 
         base {
             bindings = <
-&kp ESC        &kp B  &kp W     &kp E     &kp R      &kp T                              &kp Y        &kp U  &kp I      &kp O     &kp P     &kp BSPC
-&mt TAB ESC    &kp A  &kp S     &kp D     &kp F      &kp G                              &kp H        &kp J  &kp K      &kp L     &kp SEMI  &kp BSLH
-&kp LG(SPACE)  &kp Z  &kp X     &kp C     &kp V      &kp B                              &kp N        &kp M  &kp COMMA  &kp DOT   &kp SQT   &kp RSHFT
-                      &kp LALT  &kp LGUI  &sk LSHFT  &lt 8 SPACE  &kp SPACE    &kp RET  &lt 9 ENTER  &none  &kp LBKT   &kp RBKT
+&kp ESC      &kp B  &kp W      &kp E     &kp R      &kp T                              &kp Y        &kp U  &kp I      &kp O            &kp P     &kp BSPC
+&mt TAB ESC  &kp A  &kp S      &kp D     &kp F      &kp G                              &kp H        &kp J  &kp K      &kp L            &kp SEMI  &kp BSLH
+&tog 10      &kp Z  &kp X      &kp C     &kp V      &kp B                              &kp N        &kp M  &kp COMMA  &kp DOT          &kp SQT   &kp RSHFT
+                    &kp LC(Z)  &kp LGUI  &sk LSHFT  &lt 8 SPACE  &kp SPACE    &kp RET  &lt 9 ENTER  &none  &kp F2     &mt LC(V) LC(C)
             >;
 
             display-name = "Base";
@@ -220,10 +302,10 @@
 
         Simvols {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans    &trans   &trans     &trans        &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &Dot_zap  &Kv_Fig  &Krug_Ugl  &ToZap_Dvoet  &Npod_Rav  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans    &trans   &trans     &trans        &trans     &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans   &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &DCav_Dol      &mt FSLH ASTRK  &mt MINUS PLUS  &trans           &trans          &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &mt COMMA DOT  &Kv_Fig         &Krug_Ugl       &mt UNDER EQUAL  &mt COLON SEMI  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans         &trans          &trans          &trans           &trans          &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans         &trans          &kp PRCNT       &trans
             >;
 
             display-name = "User1";
@@ -231,21 +313,21 @@
 
         Vis_Stud {
             bindings = <
-&trans  &trans  &trans         &kp UP          &trans               &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &mt LEFT HOME  &kp DOWN_ARROW  &mt END RIGHT_ARROW  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans         &trans          &trans               &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-                &trans         &trans          &trans               &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans       &ClearSpace_Save  &kp UP          &mt LC(MINUS) LC(T)  &trans                            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LS(F12)  &mt LEFT HOME     &kp DOWN_ARROW  &mt END RIGHT_ARROW  &Ren_Dublicate                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans       &trans            &trans          &trans               &trans                            &trans  &trans  &trans  &trans  &trans  &trans
+                     &trans            &Komit_UnCom    &trans               &trans          &trans    &trans  &trans  &trans  &trans  &trans
             >;
 
             display-name = "User2";
         };
 
-        User3 {
+        numbers {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans   &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&kp N0   &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                    &trans  &kp N6  &kp N7  &kp N8  &kp N9  &trans
+&tog 10  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+                 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
 
             display-name = "User3";
