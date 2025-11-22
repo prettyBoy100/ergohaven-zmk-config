@@ -302,8 +302,8 @@
 
         Simvols {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &DCav_Dol      &mt FSLH ASTRK  &mt MINUS PLUS  &trans           &trans          &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &mt COMMA DOT  &Kv_Fig         &Krug_Ugl       &mt UNDER EQUAL  &mt COLON SEMI  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &DCav_Dol      &mt FSLH ASTRK  &mt MINUS PLUS  &i_ili           &trans          &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &mt COMMA DOT  &Kv_Fig         &Krug_Ugl       &mt UNDER EQUAL  &mt COLON SEMI  &double_Kav
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans         &trans          &trans          &trans           &trans          &trans
                 &trans  &trans  &trans  &trans  &trans    &trans  &trans         &trans          &kp PRCNT       &trans
             >;
