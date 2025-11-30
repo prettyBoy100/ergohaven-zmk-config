@@ -28,12 +28,11 @@
             release-after-ms = <200>;
         };
 
-        Kv_Fig: Kv_Fig {
+        Kvad: Kvad {
             compatible = "zmk,behavior-tap-dance";
-            label = "KV_FIG";
+            label = "KVAD";
             #binding-cells = <0>;
-            bindings = <&SqBrackets>, <&FigBrackets>;
-
+            bindings = <&SqBrackets>;
             tapping-term-ms = <220>;
         };
 
@@ -302,10 +301,10 @@
 
         Simvols {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &DCav_Dol      &mt FSLH ASTRK  &mt MINUS PLUS  &i_ili           &trans          &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &mt COMMA DOT  &Kv_Fig         &Krug_Ugl       &mt UNDER EQUAL  &mt COLON SEMI  &double_Kav
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans         &trans          &trans          &trans           &trans          &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans         &trans          &kp PRCNT       &trans
+&trans  &trans  &trans     &Kvad            &trans          &trans                    &trans    &mt FSLH ASTRK  &mt MINUS PLUS  &trans     &trans          &trans
+&trans  &trans  &Krug_Ugl  &mt EQUAL UNDER  &kp LEFT_BRACE  &trans                    &kp EXCL  &i_ili          &mt COMMA DOT   &DCav_Dol  &mt COLON SEMI  &trans
+&trans  &trans  &trans     &trans           &trans          &trans                    &trans    &trans          &trans          &trans     &trans          &trans
+                &trans     &trans           &trans          &trans  &trans    &trans  &trans    &trans          &kp PRCNT       &kp HASH
             >;
 
             display-name = "User1";
@@ -313,10 +312,10 @@
 
         Vis_Stud {
             bindings = <
-&trans  &trans       &ClearSpace_Save  &kp UP          &mt LS(MINUS) LC(T)  &trans                            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LS(F12)  &mt HOME LEFT     &kp DOWN_ARROW  &mt END RIGHT_ARROW  &Ren_Dublicate                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans       &trans            &trans          &trans               &trans                            &trans  &trans  &trans  &trans  &trans  &trans
-                     &trans            &Komit_UnCom    &trans               &trans          &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans         &kp UP          &mt LS(MINUS) LC(T)  &trans                            &trans  &trans  &kp F12        &trans  &trans  &trans
+&trans  &trans  &mt HOME LEFT  &kp DOWN_ARROW  &mt END RIGHT_ARROW  &Ren_Dublicate                    &trans  &trans  &kp LC(MINUS)  &trans  &trans  &trans
+&trans  &trans  &trans         &ClearSpaces    &trans               &trans                            &trans  &trans  &trans         &trans  &trans  &trans
+                &trans         &Komit_UnCom    &trans               &trans          &trans    &trans  &trans  &trans  &trans         &trans
             >;
 
             display-name = "User2";
