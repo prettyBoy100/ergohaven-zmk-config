@@ -125,7 +125,17 @@
 
         Lang {
             bindings = <&kp LG(SPACE)>;
-            key-positions = <24>;
+            key-positions = <37>;
+        };
+
+        Back_z {
+            bindings = <&Obratno>;
+            key-positions = <15 16>;
+        };
+
+        Save {
+            bindings = <&Save>;
+            key-positions = <3 4>;
         };
     };
 
@@ -206,6 +216,20 @@
             bindings = <&kp LC(K) &kp LC(D)>;
             label = "CLEARSPACES";
         };
+
+        Obratno: Obratno {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(Z)>;
+            label = "OBRATNO";
+        };
+
+        Save: Save {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(S)>;
+            label = "SAVE";
+        };
     };
 
     keymap {
@@ -213,10 +237,10 @@
 
         base {
             bindings = <
-&tog 3          &kp B  &kp W      &kp E      &kp R        &kp T                           &kp Y        &kp U  &kp I      &kp O            &kp P     &kp BSPC
-&sk LEFT_SHIFT  &kp A  &kp S      &kp D      &kp F        &kp G                           &kp H        &kp J  &kp K      &kp L            &kp SEMI  &mt DELETE LC(BACKSPACE)
-&none           &kp Z  &kp X      &kp C      &kp V        &kp B                           &kp N        &kp M  &kp COMMA  &kp DOT          &kp SQT   &kp RSHFT
-                       &kp LC(Z)  &kp LC(S)  &mt ESC TAB  &lt 8 SPACE  &tog 10    &tog 7  &lt 9 ENTER  &none  &kp F2     &mt LC(V) LC(C)
+&kp F2          &kp B  &kp W            &kp E   &kp R        &kp T                           &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&sk LEFT_SHIFT  &kp A  &kp S            &kp D   &kp F        &kp G                           &kp H        &kp J  &kp K      &kp L    &kp SEMI  &mt DELETE LC(BACKSPACE)
+&none           &kp Z  &kp X            &kp C   &kp V        &kp B                           &kp N        &kp M  &kp COMMA  &kp DOT  &kp SQT   &kp RSHFT
+                       &mt LC(V) LC(C)  &trans  &mt ESC TAB  &lt 8 SPACE  &tog 10    &tog 7  &lt 9 ENTER  &none  &trans     &trans
             >;
 
             display-name = "Base";
