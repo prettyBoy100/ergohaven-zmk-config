@@ -336,10 +336,10 @@
 
         Vis_Stud {
             bindings = <
-&trans  &trans  &trans         &kp UP          &mt LS(MINUS) LC(T)  &trans                            &trans  &trans  &kp F12        &trans  &trans  &trans
+&trans  &trans  &Komit_UnCom   &kp UP          &mt LS(MINUS) LC(T)  &trans                            &trans  &trans  &kp F12        &trans  &trans  &trans
 &trans  &trans  &mt HOME LEFT  &kp DOWN_ARROW  &mt END RIGHT_ARROW  &Ren_Dublicate                    &trans  &trans  &kp LC(MINUS)  &trans  &trans  &trans
 &trans  &trans  &trans         &ClearSpaces    &trans               &trans                            &trans  &trans  &trans         &trans  &trans  &trans
-                &trans         &Komit_UnCom    &trans               &trans          &trans    &trans  &trans  &trans  &trans         &trans
+                &trans         &trans          &trans               &trans          &trans    &trans  &trans  &trans  &trans         &trans
             >;
 
             display-name = "User2";
