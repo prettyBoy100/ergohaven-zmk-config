@@ -112,6 +112,16 @@
             bindings = <&kp LC(S)>, <&ClearSpaces>;
         };
 
+        MidleB: MidleB {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MIDLEB";
+            bindings = <&MidleMouse>, <&trans>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            hold-trigger-key-positions = <28>;
+        };
+
         zip_auto_mouse: zip_auto_mouse {
             compatible = "zmk,input-processor-temp-layer";
             #input-processor-cells = <2>;
@@ -367,7 +377,7 @@
             bindings = <
 &kp LCTRL  &trans       &mt B S            &mt I E            &mt LC(R) R        &kp LA(Z)                     &kp N1  &kp N2  &kp N3  &trans  &trans  &trans
 &kp LSHFT  &mt LS(A) A  &mt KP_NUMBER_1 X  &mt KP_NUMBER_3 Y  &mt KP_NUMBER_7 Z  &mt F G                       &kp N4  &kp N5  &kp N6  &trans  &trans  &trans
-&trans     &trans       &kp RS(D)          &mt V K            &MidleMouse        &trans                        &kp N7  &kp N8  &kp N9  &trans  &trans  &tog 11
+&trans     &trans       &kp RS(D)          &mt V K            &MidleB 0 0        &trans                        &kp N7  &kp N8  &kp N9  &trans  &trans  &tog 11
                         &trans             &trans             &mt ESC TAB        &kp LALT   &kp DOT    &trans  &trans  &trans  &trans  &trans
             >;
         };
