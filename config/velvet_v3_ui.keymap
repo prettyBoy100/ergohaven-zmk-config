@@ -342,10 +342,10 @@
 
         Simvols {
             bindings = <
-&trans  &trans  &trans     &Kvad            &trans          &trans                    &trans    &mt FSLH ASTRK  &mt MINUS PLUS  &trans     &trans          &trans
-&trans  &trans  &Krug_Ugl  &mt EQUAL UNDER  &kp LEFT_BRACE  &trans                    &kp EXCL  &i_ili          &mt COMMA DOT   &DCav_Dol  &mt COLON SEMI  &trans
-&trans  &trans  &trans     &trans           &trans          &trans                    &trans    &trans          &trans          &trans     &trans          &trans
-                &trans     &trans           &trans          &trans  &trans    &trans  &trans    &trans          &kp PRCNT       &kp HASH
+&trans  &trans    &kp GREATER_THAN    &mt LEFT_BRACKET UP              &mt EQUAL UNDER       &kp F2                     &trans    &mt FSLH ASTRK  &mt MINUS PLUS  &trans     &trans          &trans
+&trans  &kp HOME  &mt LESS_THAN LEFT  &mt LEFT_PARENTHESIS DOWN_ARROW  &mt LEFT_BRACE RIGHT  &kp END                    &kp EXCL  &i_ili          &mt COMMA DOT   &DCav_Dol  &mt COLON SEMI  &trans
+&trans  &trans    &trans              &trans                           &trans                &trans                     &trans    &trans          &trans          &trans     &trans          &trans
+                  &trans              &trans                           &trans                &trans   &trans    &trans  &trans    &trans          &kp PRCNT       &kp HASH
             >;
 
             display-name = "User1";
