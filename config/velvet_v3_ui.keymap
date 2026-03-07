@@ -354,7 +354,7 @@
         Vis_Stud {
             bindings = <
 &trans  &trans  &none              &mt LC(T) F12           &ClearSpaces   &trans                    &trans  &trans  &kp F12        &trans  &trans  &trans
-&trans  &trans  &mt LC(FSLH) HOME  &mt LC(KP_MINUS) LC(R)  &mt LC(D) END  &none                     &trans  &trans  &kp LC(MINUS)  &trans  &trans  &trans
+&trans  &trans  &mt LC(FSLH) HOME  &mt LC(KP_MINUS) LC(R)  &mt LC(D) END  &trans                    &trans  &trans  &kp LC(MINUS)  &trans  &trans  &trans
 &trans  &trans  &trans             &none                   &trans         &trans                    &trans  &trans  &trans         &trans  &trans  &trans
                 &trans             &trans                  &trans         &trans  &trans    &trans  &trans  &trans  &trans         &trans
             >;
