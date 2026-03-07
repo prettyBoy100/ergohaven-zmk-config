@@ -355,7 +355,7 @@
             bindings = <
 &trans  &trans  &Rename_Var                    &mt LC(T) F12  &ClearSpaces         &trans                    &trans  &trans  &kp F12        &trans  &trans  &trans
 &trans  &trans  &mt LG(NUMBER_1) LG(NUMBER_2)  &kp LC(MINUS)  &mt LC(D) LC(SLASH)  &trans                    &trans  &trans  &kp LC(MINUS)  &trans  &trans  &trans
-&trans  &trans  &trans                         &trans         &kp MINUS            &trans                    &trans  &trans  &trans         &trans  &trans  &trans
+&trans  &trans  &trans                         &trans         &kp LC(KP_MINUS)     &trans                    &trans  &trans  &trans         &trans  &trans  &trans
                 &trans                         &trans         &trans               &trans  &trans    &trans  &trans  &trans  &trans         &trans
             >;
 
