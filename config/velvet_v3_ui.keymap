@@ -251,14 +251,14 @@
         shortcut_En: shortcut_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 10 &kp F23>;
+            bindings = <&to 10 &kp F23>;
             label = "SHORTCUT_MACRO";
         };
 
         shortcut_Ex: shortcut_E10 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 10 &kp F24>;
+            bindings = <&to 0 &kp F24>;
             label = "SHORTCUT_E10";
         };
     };
