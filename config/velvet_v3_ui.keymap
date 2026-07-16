@@ -258,6 +258,20 @@
 
             label = "SHORTCUT_EN";
         };
+
+        SHADER_EN: SHADER_EN {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 12 &kp LC(F23)>;
+            label = "SHADER_EN";
+        };
+
+        SHADER_ex: SHADER_ex {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(F24) &to 0>;
+            label = "SHADER_EX";
+        };
     };
 
     keymap {
@@ -265,7 +279,7 @@
 
         base {
             bindings = <
-&tog 12         &kp Q  &kp W    &kp E      &kp R        &kp T                                &kp Y        &kp U  &kp I               &kp O                      &kp P     &kp BSPC
+&SHADER_EN      &kp Q  &kp W    &kp E      &kp R        &kp T                                &kp Y        &kp U  &kp I               &kp O                      &kp P     &kp BSPC
 &sk LEFT_SHIFT  &kp A  &kp S    &kp D      &kp F        &kp G                                &kp H        &kp J  &kp K               &kp L                      &kp SEMI  &mt DELETE LC(BACKSPACE)
 &none           &kp Z  &kp X    &kp C      &kp V        &kp B                                &kp N        &kp M  &kp COMMA           &kp DOT                    &kp SQT   &tog 11
                        &kp DOT  &kp COMMA  &mt ESC TAB  &lt 8 SPACE  &shortcut_EN    &tog 3  &lt 9 ENTER  &none  &kp RU_CYRILLIC_HA  &kp RU_CYRILLIC_HARD_SIGN
@@ -395,10 +409,10 @@
 
         ShaderGraph {
             bindings = <
-&trans  &trans  &mt F3 F4    &mt F13 F14  &mt F21 F22  &mt F5 F6                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &mt F17 F18  &mt F15 F16  &mt F19 F20  &mt F7 F8                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans       &trans       &mkp MB3     &trans                       &trans  &trans  &trans  &trans  &trans  &trans
-                &trans       &trans       &trans       &trans     &trans    &trans  &trans  &trans  &trans  &trans
+&SHADER_ex  &trans  &mt LC(F13) LC(F14)  &mt F13 F14          &mt F21 F22  &mt LC(F21) LC(F22)                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans  &mt F17 F18          &mt F15 F16          &mt F19 F20  &mt LC(F19) LC(F20)                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans  &trans               &mt LC(F15) LC(F16)  &mkp MB3     &trans                                 &trans  &trans  &trans  &trans  &trans  &trans
+                    &trans               &trans               &trans       &trans               &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
