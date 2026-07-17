@@ -293,10 +293,10 @@
 
         base {
             bindings = <
-&SHADER_EN      &kp Q  &kp W    &kp E      &kp R        &kp T                                &kp Y        &kp U  &kp I               &kp O                      &kp P     &kp BSPC
-&sk LEFT_SHIFT  &kp A  &kp S    &kp D      &kp F        &kp G                                &kp H        &kp J  &kp K               &kp L                      &kp SEMI  &mt DELETE LC(BACKSPACE)
-&none           &kp Z  &kp X    &kp C      &kp V        &kp B                                &kp N        &kp M  &kp COMMA           &kp DOT                    &kp SQT   &Blender_En
-                       &kp DOT  &kp COMMA  &mt ESC TAB  &lt 8 SPACE  &shortcut_EN    &tog 3  &lt 9 ENTER  &none  &kp RU_CYRILLIC_HA  &kp RU_CYRILLIC_HARD_SIGN
+&SHADER_EN      &kp Q  &kp W    &kp E      &kp R         &kp T                           &kp Y        &kp U  &kp I               &kp O                      &kp P     &kp BSPC
+&sk LEFT_SHIFT  &kp A  &kp S    &kp D      &kp F         &kp G                           &kp H        &kp J  &kp K               &kp L                      &kp SEMI  &mt DELETE LC(BACKSPACE)
+&none           &kp Z  &kp X    &kp C      &kp V         &kp B                           &kp N        &kp M  &kp COMMA           &kp DOT                    &kp SQT   &Blender_En
+                       &kp DOT  &kp COMMA  &shortcut_EN  &lt 8 SPACE  &kp ESC    &tog 3  &lt 9 ENTER  &none  &kp RU_CYRILLIC_HA  &kp RU_CYRILLIC_HARD_SIGN
             >;
 
             display-name = "Base";
@@ -403,10 +403,10 @@
 
         ShortCut {
             bindings = <
-&trans  &trans  &mt LG(LS(S)) F2      &mt LC(D) LC(V)    &mt LC(P) LS(SPACE)  &kp LC(A)                          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &mt DELETE BACKSPACE  &mt LG(M) LA(TAB)  &kp LS(LC(P))        &mt LC(X) LC(C)                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans                &trans             &trans               &trans                             &trans  &trans  &trans  &trans  &trans  &trans
-                &trans                &trans             &trans               &trans           &trans    &trans  &trans  &trans  &trans  &trans
+&trans     &kp F2  &mt P LC(LS(P))  &kp LS(SPACE)  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&kp LG(M)  &trans  &kp LA(TAB)      &trans         &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans  &trans           &trans         &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+                   &trans           &trans         &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
 
             display-name = "User3";
@@ -423,10 +423,10 @@
 
         ShaderGraph {
             bindings = <
-&SHADER_ex  &trans  &mt LC(F13) LC(F14)  &mt F13 F14          &mt F21 F22  &mt LC(F21) LC(F22)                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &trans  &mt F17 F18          &mt F15 F16          &mt F19 F20  &mt LC(F19) LC(F20)                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &trans  &trans               &mt LC(F15) LC(F16)  &mkp MB3     &trans                                 &trans  &trans  &trans  &trans  &trans  &trans
-                    &trans               &trans               &trans       &trans               &trans    &trans  &trans  &trans  &trans  &trans
+&SHADER_ex           &mt LC(F21) LC(F22)  &mt LC(F13) LC(F14)  &mt F13 F14  &trans       &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&mt LC(F19) LC(F20)  &mt F21 F22          &mt F17 F18          &mt F15 F16  &mt F19 F20  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans               &trans               &trans               &mkp MB3     &trans       &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+                                          &trans               &trans       &trans       &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
