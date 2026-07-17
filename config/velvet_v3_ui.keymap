@@ -272,6 +272,20 @@
             bindings = <&kp LC(F24) &to 0>;
             label = "SHADER_EX";
         };
+
+        Blender_En: Blender_En {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 11 &kp LS(F23)>;
+            label = "BLENDER_EN";
+        };
+
+        Blender_Exl: Blender_Exl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(F24) &to 0>;
+            label = "BLENDER_EXL";
+        };
     };
 
     keymap {
@@ -281,7 +295,7 @@
             bindings = <
 &SHADER_EN      &kp Q  &kp W    &kp E      &kp R        &kp T                                &kp Y        &kp U  &kp I               &kp O                      &kp P     &kp BSPC
 &sk LEFT_SHIFT  &kp A  &kp S    &kp D      &kp F        &kp G                                &kp H        &kp J  &kp K               &kp L                      &kp SEMI  &mt DELETE LC(BACKSPACE)
-&none           &kp Z  &kp X    &kp C      &kp V        &kp B                                &kp N        &kp M  &kp COMMA           &kp DOT                    &kp SQT   &tog 11
+&none           &kp Z  &kp X    &kp C      &kp V        &kp B                                &kp N        &kp M  &kp COMMA           &kp DOT                    &kp SQT   &Blender_En
                        &kp DOT  &kp COMMA  &mt ESC TAB  &lt 8 SPACE  &shortcut_EN    &tog 3  &lt 9 ENTER  &none  &kp RU_CYRILLIC_HA  &kp RU_CYRILLIC_HARD_SIGN
             >;
 
@@ -402,7 +416,7 @@
             bindings = <
 &kp LCTRL  &trans       &mt B S            &mt I E            &mt LC(R) R        &kp LA(Z)                    &kp N1  &kp N2  &kp N3  &trans  &trans  &trans
 &kp LSHFT  &mt LS(A) A  &mt KP_NUMBER_1 X  &mt KP_NUMBER_3 Y  &mt KP_NUMBER_7 Z  &mt F G                      &kp N4  &kp N5  &kp N6  &trans  &trans  &trans
-&trans     &trans       &kp RS(D)          &mt V K            &mkp MB3           &trans                       &kp N7  &kp N8  &kp N9  &trans  &trans  &tog 11
+&trans     &trans       &kp RS(D)          &mt V K            &mkp MB3           &trans                       &kp N7  &kp N8  &kp N9  &trans  &trans  &Blender_Exl
                         &trans             &trans             &mt ESC TAB        &kp LALT   &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
