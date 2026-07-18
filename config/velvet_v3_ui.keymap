@@ -403,10 +403,10 @@
 
         ShortCut {
             bindings = <
-&trans     &kp F2  &mt P LC(LS(P))  &kp LS(SPACE)  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&kp LG(M)  &trans  &kp LA(TAB)      &trans         &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans     &trans  &trans           &trans         &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-                   &trans           &trans         &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&kp LG(LS(S))  &kp F2  &mt LC(P) LC(LS(P))  &kp LS(SPACE)  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&kp LG(M)      &trans  &kp LA(TAB)          &trans         &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans         &trans  &trans               &trans         &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+                       &trans               &trans         &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
 
             display-name = "User3";
