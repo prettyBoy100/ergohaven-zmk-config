@@ -287,10 +287,10 @@
             label = "BLENDER_EXL";
         };
 
-        Debug: Debug {
+        DEBUG: DEBUG {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(D) &kp E &kp B &kp U &kp G &kp DOT &kp LS(L) &kp O &kp G &kp LPAR &kp DLLR &kp DQT &kp LBRC &kp N &kp A &kp M &kp E &kp O &kp F &kp LPAR &kp LS(A) &kp D &kp D &kp LS(I) &kp T &kp E &kp M &kp RPAR &kp RBRC &kp DQT &kp RPAR &kp SEMI>;
+            bindings = <&kp LS(D) &kp E &kp B &kp U &kp G &kp DOT &kp LS(L) &kp O &kp G &kp LPAR &kp DLLR &kp DQT &kp LBRC &kp N &kp A &kp M &kp E &kp O &kp F &kp LPAR &kp LS(A) &kp D &kp D &kp LS(I) &kp T &kp E &kp M &kp RPAR &kp RBRC &kp COLON &kp DQT &kp RPAR>;
             label = "DEBUG";
         };
     };
@@ -399,7 +399,7 @@
 
         Vis_Stud {
             bindings = <
-&trans  &trans  &Rename_Var                    &mt LC(T) F12  &ClearSpaces         &Debug                         &trans  &trans  &mt LS(SPACE) LC(P)  &trans  &trans  &trans
+&trans  &trans  &Rename_Var                    &mt LC(T) F12  &ClearSpaces         &DEBUG                         &trans  &trans  &mt LS(SPACE) LC(P)  &trans  &trans  &trans
 &trans  &trans  &mt LG(NUMBER_1) LG(NUMBER_2)  &kp LC(MINUS)  &mt LC(D) LC(SLASH)  &kp LC(DOT)                    &trans  &trans  &trans               &trans  &trans  &trans
 &trans  &trans  &trans                         &trans         &trans               &trans                         &trans  &trans  &trans               &trans  &trans  &trans
                 &trans                         &trans         &trans               &trans       &trans    &trans  &trans  &trans  &trans               &trans
