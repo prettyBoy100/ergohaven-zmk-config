@@ -428,12 +428,12 @@
             >;
         };
 
-        ShaderGraph {
+        BloodStrike {
             bindings = <
-&SHADER_ex           &mt LC(F21) LC(F22)  &mt LC(F13) LC(F14)  &mt F13 F14  &trans       &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&mt LC(F19) LC(F20)  &mt F21 F22          &mt F17 F18          &mt F15 F16  &mt F19 F20  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans               &trans               &trans               &mkp MB3     &trans       &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-                                          &trans               &trans       &trans       &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&SHADER_ex  &mt LC(F21) LC(F22)  &kp Q   &kp W     &kp E         &mkp MB3                           &trans  &trans  &trans  &trans  &trans  &trans
+&mt Y T     &kp LEFT_SHIFT       &kp A   &kp S     &kp D         &kp F                              &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &mt M V              &trans  &mkp MB3  &kp NUMBER_3  &trans                             &trans  &trans  &trans  &trans  &trans  &trans
+                                 &trans  &trans    &kp C         &kp SPACE  &kp LEFT_ALT    &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
