@@ -430,10 +430,10 @@
 
         BloodStrike {
             bindings = <
-&SHADER_ex  &mt LC(F21) LC(F22)  &kp Q   &kp W     &kp E         &mkp MB3                           &trans  &trans  &trans  &trans  &trans  &trans
-&mt Y T     &kp LEFT_SHIFT       &kp A   &kp S     &kp D         &kp F                              &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &mt M V              &trans  &mkp MB3  &kp NUMBER_3  &trans                             &trans  &trans  &trans  &trans  &trans  &trans
-                                 &trans  &trans    &kp C         &kp SPACE  &kp LEFT_ALT    &trans  &trans  &trans  &trans  &trans
+&SHADER_ex  &mt LC(F21) LC(F22)  &kp Q   &kp W     &kp E           &kp R                              &trans  &trans  &trans  &trans  &trans  &trans
+&mt Y T     &kp LEFT_SHIFT       &kp A   &kp S     &kp D           &kp F                              &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &mt M V              &trans  &mkp MB3  &mt C NUMBER_3  &trans                             &trans  &trans  &trans  &trans  &trans  &trans
+                                 &trans  &trans    &mkp MB3        &kp SPACE  &kp LEFT_ALT    &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
