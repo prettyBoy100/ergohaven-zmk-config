@@ -297,10 +297,7 @@
         bloodThrow: bloodThrow {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp LEFT_ALT &kp NUMBER_3>,
-                <&macro_wait_time 100>,
-                <&kp C>;
+            bindings = <&kp LEFT_ALT>, <&macro_wait_time 200>, <&kp C>;
 
             label = "BLOODTHROW";
         };
