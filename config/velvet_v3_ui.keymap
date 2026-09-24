@@ -293,6 +293,17 @@
             bindings = <&kp LS(D) &kp E &kp B &kp U &kp G &kp DOT &kp LS(L) &kp O &kp G &kp LPAR &kp DLLR &kp DQT &kp LBRC &kp N &kp A &kp M &kp E &kp O &kp F &kp LPAR &kp LS(A) &kp D &kp D &kp LS(I) &kp T &kp E &kp M &kp RPAR &kp RBRC &kp COLON &kp DQT &kp RPAR>;
             label = "DEBUG";
         };
+
+        bloodThrow: bloodThrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LEFT_ALT &kp NUMBER_3>,
+                <&macro_wait_time 100>,
+                <&kp C>;
+
+            label = "BLOODTHROW";
+        };
     };
 
     keymap {
@@ -430,10 +441,10 @@
 
         BloodStrike {
             bindings = <
-&SHADER_ex  &kp ESC         &kp Q   &kp W     &kp E         &kp R                              &trans  &trans  &trans  &trans  &trans  &trans
-&mt Y T     &kp LEFT_SHIFT  &kp A   &kp S     &kp D         &kp F                              &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &mt M V         &trans  &mkp MB3  &kp C         &trans                             &trans  &trans  &trans  &trans  &trans  &trans
-                            &trans  &trans    &kp LEFT_ALT  &kp SPACE  &kp NUMBER_3    &trans  &trans  &trans  &trans  &trans
+&SHADER_ex  &trans          &kp Q   &kp W     &kp E        &kp R                                  &trans  &trans  &trans  &trans  &trans  &trans
+&mt Y T     &kp LEFT_SHIFT  &kp A   &kp S     &kp D        &kp F                                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &mt M V         &trans  &mkp MB3  &kp C        &trans                                 &trans  &trans  &trans  &trans  &trans  &trans
+                            &trans  &trans    &bloodThrow  &kp SPACE  &mt ESC NUMBER_3    &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
