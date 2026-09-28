@@ -301,6 +301,19 @@
 
             label = "BLOODTHROW";
         };
+
+        bloodCrunch: bloodCrunch {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LEFT_SHIFT>,
+                <&macro_wait_time 100>,
+                <&kp LEFT_SHIFT>,
+                <&macro_wait_time 100>,
+                <&kp C>;
+
+            label = "BLOODCRUNCH";
+        };
     };
 
     keymap {
@@ -438,10 +451,10 @@
 
         BloodStrike {
             bindings = <
-&SHADER_ex  &trans          &kp Q   &kp W     &kp E         &kp R                                  &trans  &trans  &trans  &trans  &trans  &trans
-&mt Y T     &kp LEFT_SHIFT  &kp A   &kp S     &kp D         &kp F                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &mt M V         &trans  &mkp MB3  &kp C         &trans                                 &trans  &trans  &trans  &trans  &trans  &trans
-                            &trans  &trans    &kp LEFT_ALT  &kp SPACE  &mt ESC NUMBER_3    &trans  &trans  &trans  &trans  &trans
+&SHADER_ex  &trans          &kp Q   &kp W     &kp E         &kp R                              &trans  &trans  &trans  &trans  &trans  &trans
+&mt Y T     &kp LEFT_SHIFT  &kp A   &kp S     &kp D         &kp F                              &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &mt M V         &trans  &mkp MB3  &kp C         &trans                             &trans  &trans  &trans  &trans  &trans  &trans
+                            &trans  &trans    &kp LEFT_ALT  &kp SPACE  &bloodCrunch    &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
