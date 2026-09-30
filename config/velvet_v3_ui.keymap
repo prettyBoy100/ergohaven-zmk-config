@@ -467,7 +467,7 @@
 &SHADER_ex  &trans          &kp Q   &kp W     &kp E         &kp R                              &trans  &trans  &trans  &trans  &trans  &trans
 &mt Y T     &kp LEFT_SHIFT  &kp A   &kp S     &kp D         &kp F                              &trans  &trans  &trans  &trans  &trans  &trans
 &trans      &mt M V         &trans  &mkp MB3  &kp C         &trans                             &trans  &trans  &trans  &trans  &trans  &trans
-                            &trans  &trans    &kp LEFT_ALT  &kp SPACE  &bloodCrunch    &trans  &trans  &trans  &trans  &trans
+                            &trans  &trans    &kp LEFT_ALT  &bloodCrunch  &kp SPACE    &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
