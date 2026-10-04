@@ -259,14 +259,14 @@
             label = "SHORTCUT_EN";
         };
 
-        SHADER_EN: SHADER_EN {
+        Game_EnMode: SHADER_EN {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 12 &kp LC(F23)>;
+            bindings = <&to 12 &kp F22>;
             label = "SHADER_EN";
         };
 
-        SHADER_ex: SHADER_ex {
+        Base_Layer: SHADER_ex {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(F24) &to 0>;
@@ -315,7 +315,7 @@
             label = "BLOODCRUNCH";
         };
 
-        untiyMode: untiyMode {
+        Unity_Mode: untiyMode {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -327,6 +327,13 @@
 
             label = "UNTIYMODE";
         };
+
+        Game_ExMode: Game_ExMode {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 12 &kp F21>;
+            label = "GAME_EXMODE";
+        };
     };
 
     keymap {
@@ -334,10 +341,10 @@
 
         base {
             bindings = <
-&SHADER_EN      &kp Q  &kp W    &kp E      &kp R       &kp T                              &kp Y        &kp U  &kp I               &kp O                      &kp P     &kp BSPC
-&sk LEFT_SHIFT  &kp A  &kp S    &kp D      &kp F       &kp G                              &kp H        &kp J  &kp K               &kp L                      &kp SEMI  &mt DELETE LC(BACKSPACE)
-&none           &kp Z  &kp X    &kp C      &kp V       &kp B                              &kp N        &kp M  &kp COMMA           &kp DOT                    &kp SQT   &Blender_En
-                       &kp DOT  &kp COMMA  &untiyMode  &lt 8 SPACE  &mt ESC TAB    &mo 3  &lt 9 ENTER  &none  &kp RU_CYRILLIC_HA  &kp RU_CYRILLIC_HARD_SIGN
+&Game_EnMode    &kp Q  &kp W    &kp E      &kp R        &kp T                              &kp Y        &kp U  &kp I               &kp O                      &kp P     &kp BSPC
+&sk LEFT_SHIFT  &kp A  &kp S    &kp D      &kp F        &kp G                              &kp H        &kp J  &kp K               &kp L                      &kp SEMI  &mt DELETE LC(BACKSPACE)
+&none           &kp Z  &kp X    &kp C      &kp V        &kp B                              &kp N        &kp M  &kp COMMA           &kp DOT                    &kp SQT   &Blender_En
+                       &kp DOT  &kp COMMA  &Unity_Mode  &lt 8 SPACE  &mt ESC TAB    &mo 3  &lt 9 ENTER  &none  &kp RU_CYRILLIC_HA  &kp RU_CYRILLIC_HARD_SIGN
             >;
 
             display-name = "Base";
@@ -464,10 +471,10 @@
 
         BloodStrike {
             bindings = <
-&SHADER_ex  &trans          &kp Q   &kp W     &kp E         &kp R                              &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &trans          &kp A   &kp S     &kp D         &kp F                              &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &kp LEFT_SHIFT  &trans  &mkp MB3  &kp C         &mt Y T                            &trans  &trans  &trans  &trans  &trans  &trans
-                            &trans  &trans    &kp LEFT_ALT  &kp SPACE  &kp LEFT_ALT    &trans  &trans  &trans  &trans  &trans
+&Base_Layer  &trans          &kp Q   &kp W     &kp E         &kp R                              &trans  &trans  &trans  &trans  &trans  &trans
+&trans       &trans          &kp A   &kp S     &kp D         &kp F                              &trans  &trans  &trans  &trans  &trans  &trans
+&trans       &kp LEFT_SHIFT  &trans  &mkp MB3  &kp C         &mt Y T                            &trans  &trans  &trans  &trans  &trans  &trans
+                             &trans  &trans    &kp LEFT_ALT  &kp SPACE  &kp LEFT_ALT    &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
