@@ -331,7 +331,7 @@
         Game_ExMode: Game_ExMode {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 12 &kp F21>;
+            bindings = <&to 0 &kp F21>;
             label = "GAME_EXMODE";
         };
     };
@@ -471,10 +471,10 @@
 
         BloodStrike {
             bindings = <
-&Base_Layer  &trans          &kp Q   &kp W     &kp E         &kp R                              &trans  &trans  &trans  &trans  &trans  &trans
-&trans       &trans          &kp A   &kp S     &kp D         &kp F                              &trans  &trans  &trans  &trans  &trans  &trans
-&trans       &kp LEFT_SHIFT  &trans  &mkp MB3  &kp C         &mt Y T                            &trans  &trans  &trans  &trans  &trans  &trans
-                             &trans  &trans    &kp LEFT_ALT  &kp SPACE  &kp LEFT_ALT    &trans  &trans  &trans  &trans  &trans
+&Game_ExMode  &trans          &kp Q   &kp W     &kp E         &kp R                              &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &trans          &kp A   &kp S     &kp D         &kp F                              &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &kp LEFT_SHIFT  &trans  &mkp MB3  &kp C         &mt Y T                            &trans  &trans  &trans  &trans  &trans  &trans
+                              &trans  &trans    &kp LEFT_ALT  &kp SPACE  &kp LEFT_ALT    &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
