@@ -479,7 +479,7 @@
             bindings = <
 &Game_ExMode  &trans          &kp Q   &kp W   &kp E         &kp R                              &trans  &trans  &trans  &trans  &trans  &trans
 &trans        &trans          &kp A   &kp S   &kp D         &kp F                              &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &kp LEFT_SHIFT  &trans  &kp N   &kp C         &mt Y T                            &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &kp LEFT_SHIFT  &trans  &kp M   &kp C         &mt Y T                            &trans  &trans  &trans  &trans  &trans  &trans
                               &trans  &trans  &kp LEFT_ALT  &kp SPACE  &kp LEFT_ALT    &trans  &trans  &trans  &trans  &trans
             >;
         };
