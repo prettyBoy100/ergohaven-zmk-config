@@ -319,13 +319,19 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
+                <&macro_press>,
+                <&mo 13>,
                 <&macro_tap>,
                 <&kp F23>,
                 <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mo 13>,
                 <&macro_tap>,
                 <&kp F24>;
 
             label = "UNTIYMODE";
+            tap-ms = <30>;
+            wait-ms = <0>;
         };
 
         Game_ExMode: Game_ExMode {
@@ -475,6 +481,15 @@
 &trans        &trans          &kp A   &kp S     &kp D         &kp F                              &trans  &trans  &trans  &trans  &trans  &trans
 &trans        &kp LEFT_SHIFT  &trans  &mkp MB3  &kp C         &mt Y T                            &trans  &trans  &trans  &trans  &trans  &trans
                               &trans  &trans    &kp LEFT_ALT  &kp SPACE  &kp LEFT_ALT    &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        Unity {
+            bindings = <
+&trans  &trans  &trans   &kp F20  &trans   &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp F17  &kp F19  &kp F18  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans   &trans   &trans   &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+                &trans   &trans   &trans   &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
